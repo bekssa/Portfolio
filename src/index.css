@@ -1,13 +1,134 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Onest";
+  src: url("/public/Onest.ttf");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/*header*/
+
+header {
+  display: flex;
+  height: 100px;
+  place-items: center;
+}
+
+.main {
+  height: 100px;
+  width: 100%;
+  align-items: center;
+}
+
+header a {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 3%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+header a:hover {
+  color: #4824ff;
+  filter: drop-shadow(0px 0px 50px #4824ff);
+}
+
+.btn {
+  margin-left: auto;
+  height: 55px;
+  width: 150px;
+  border-radius: 55px;
+  background-color: #4824ff;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  outline: none;
+  margin-right: 2%;
+  overflow: hidden;
+}
+
+.btn:hover {
+  filter: drop-shadow(0px 0px 35px #4824ff40);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 30px;
+  background: #ffffffbd;
+  filter: blur(2px);
+  transition: 1.5s;
+  transform: rotate(-20deg) translateX(-50px) translateY(-200px);
+}
+
+.btn:hover:before {
+  transform: rotate(-20deg) translateX(200px) translateY(-200px);
+}
+
+.icon {
+  height: 35px;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 2%;
+}
+
+.icon.telegram {
+  content: url(/public/icons/telegram.png);
+}
+.icon.github {
+  content: url(/public/icons/social.png);
+}
+.icon.cv {
+  content: url(/public/icons/cv.png);
+}
+.icon.linkedin {
+  content: url(/public/icons/linkedin.png);
+}
+.icon.mail {
+  content: url(/public/icons/mail.png);
+}
+.icon.whatsapp {
+  content: url(/public/icons/whatsapp.png);
+}
+
+.icon:hover {
+  background: #4824ff;
+  filter: drop-shadow(0px 0px 30px #4824ff40);
+}
+
+.switch {
+  height: 35px;
+  width: 65px;
+  border-radius: 35px;
+  background-color: #eeebff;
+  overflow: hidden;
+}
+.theme {
+  margin: 5px;
+  width: 26px;
+  height: 26px;
+  border-radius: 26px;
+  background-color: white;
+  transition: 0.5s ease-in-out;
+}
+
+.theme.light {
+  content: url(/public/icons/sun.png);
+}
+
+.switch:hover > .theme.light {
+  transform: rotate(45deg);
 }
