@@ -23,12 +23,14 @@ header {
 }
 
 .main {
+  border-top: 2px solid #eeeeee;
   height: 100px;
   width: 100%;
   align-items: center;
 }
 
 header a {
+  text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   margin-right: 3%;
@@ -86,6 +88,7 @@ header a:hover {
 }
 
 .icon.telegram {
+  margin-left: auto;
   content: url(/public/icons/telegram.png);
 }
 .icon.github {
@@ -131,4 +134,56 @@ header a:hover {
 
 .switch:hover > .theme.light {
   transform: rotate(45deg);
+}
+
+.main-block {
+  background: white;
+  height: 650px;
+  display: flex;
+  place-items: center;
+}
+
+.main-block h1 {
+  font-size: 52px;
+}
+
+.main-block h2 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.second-block {
+  margin-bottom: 7%;
+  margin-top: 7%;
+}
+
+.job {
+  background: linear-gradient(
+    to right,
+    #4824ff,
+    #4824ff,
+    #85ebff,
+    #eeebff,
+    #85aeff,
+    #4824ff,
+    #4824ff
+  );
+  background-clip: text;
+  color: transparent;
+  background-size: 200%;
+  animation: gradientAnimation 5s infinite linear;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.main-block .first-block {
+  align-content: center;
+  width: 55%;
 }

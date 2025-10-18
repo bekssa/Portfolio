@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import ModalWindow from "./ModalWindow";
+import ChatWithAI from "./chat";
+import "./index.css";
 
 function Main() {
   const [showModal, setShowModal] = useState(false);
 
-  const handleOpenModal = () => {
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+  const handleOpenModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
 
   return (
     <div>
@@ -18,18 +15,11 @@ function Main() {
         <a href="/">About me</a>
         <a href="/projects">Projects</a>
 
-        <button className="btn" onClick={handleOpenModal}>
-          Contact
-        </button>
-
-        <ModalWindow show={showModal} onClose={handleCloseModal}>
-          <h2 style={{ color: "#4824ff", fontSize: "40px" }}>Contacts</h2>
-        </ModalWindow>
-
         <a
           href="https://t.me/uraaasdu"
           target="_blank"
           className="icon telegram"
+          rel="noreferrer"
         />
         <a
           href="https://github.com/bekssa"
@@ -47,10 +37,27 @@ function Main() {
           className="icon cv"
         />
 
+        <button className="btn" onClick={handleOpenModal}>
+          Contact
+        </button>
+
         <div className="switch">
           <div className="theme light"></div>
         </div>
       </header>
+
+      <div className="main-block">
+        <div className="first-block">
+          <h1>
+            Bekassyl Suierkulov <br />
+            <span className="job">Frontend Developer</span>
+          </h1>
+          <h2 className="second-block">
+            I build <span style={{ color: "#4824ff" }}>clickable</span> and{" "}
+            <span style={{ color: "#4824ff" }}>user-friendly</span> websites.
+          </h2>
+        </div>
+      </div>
     </div>
   );
 }
